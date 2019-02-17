@@ -5900,11 +5900,10 @@ ffmpeg-static@^2.4.0:
   resolved "https://registry.yarnpkg.com/ffmpeg-static/-/ffmpeg-static-2.4.0.tgz#eb3a248849943d493c2a311c0e5e45a06259103a"
   integrity sha512-OcYTewd3we/Zi4W+VJtEqrfDzRSMwLs0NyAa61qw/FqtbttidGrm+BFsq44prtT3s6/LV6+aoXNpyNBOshXBuA==
 
-"ffmpeg@github:damianociarla/node-ffmpeg":
-  version "0.0.4"
-  resolved "https://codeload.github.com/damianociarla/node-ffmpeg/tar.gz/f36febdb96bab8c4573ee1af4e617b284fac25cb"
-  dependencies:
-    when ">= 0.0.1"
+ffprobe-static@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ffprobe-static/-/ffprobe-static-3.0.0.tgz#479689c8a237987beca5627968f3d87429bf569d"
+  integrity sha512-LZ1Sj4RHS95t/ReZtRbCmMEWDDl7cfIMwmhNgCZcdtOgRlAHaGGOupoc166Q9AV+T7lXnUvu5HYczcsn69c6fw==
 
 figgy-pudding@^3.1.0, figgy-pudding@^3.5.1:
   version "3.5.1"
@@ -13963,11 +13962,6 @@ whatwg-url@^7.0.0:
     lodash.sortby "^4.7.0"
     tr46 "^1.0.1"
     webidl-conversions "^4.0.2"
-
-"when@>= 0.0.1":
-  version "3.7.8"
-  resolved "https://registry.yarnpkg.com/when/-/when-3.7.8.tgz#c7130b6a7ea04693e842cdc9e7a1f2aa39a39f82"
-  integrity sha1-xxMLan6gRpPoQs3J56Hyqjmjn4I=
 
 which-module@^1.0.0:
   version "1.0.0"
