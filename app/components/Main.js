@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './Main.scss';
 import File from './UI/File';
 import ButtonFile from './UI/ButtonFile';
-import FileDrop from './UI/FileDrop';
+// import FileDrop from './UI/FileDrop';
 import Header from './UI/Header';
 import Cornvert from './../libs/ffmpeg'
 
@@ -77,14 +77,16 @@ export default class Home extends Component<Props> {
     return (
       <div className={styles.app}>
         <Header />
-        <FileDrop className={styles.list} onDrop={console.log}>
+        {/*<FileDrop className={styles.list} onDrop={console.log}>*/}
+        <div className={styles.list}>
           <File name="VIDEO_7291VIDEO_7291VIDEO_7291.MOV" progress={0} />
           <File name="VIDEO_7291.MOV" progress={100} />
           <File name="video.MOV" progress={50} />
           {this.state.files.map(file => (
             <File name={file.name} />
           ))}
-        </FileDrop>
+        </div>
+        {/*</FileDrop>*/}
         <div className={styles.bar}>
           <ButtonFile className={styles.addFileButton}>+ add file</ButtonFile>
           <select className={styles.format}>
