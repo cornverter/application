@@ -5,54 +5,73 @@ import styles from './Main.scss';
 import File from './UI/File';
 import Header from './UI/Header';
 import Cornvert from './../libs/ffmpeg'
+
 // const fixPath = require('fix-path');
 // fixPath();
 
-
-
-
-//=========
-
-
 export default class Home extends Component<Props> {
   props: Props;
+
+  constructor(props){
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleInfo = this.handleInfo.bind(this);
+  }
 
   state = {
     files: []
   }
 
-  // var files = [];
+  handleInfo(){
+    let files = this.state.files;
 
-  handleChange(e){
-    console.log(e.target.files);
-    this.setState({files: [{ name: e.target.files[0].name }]});
+    this.setState({ files });
+  }
 
-    
-    for(var i=0; i<e.target.files.length; i++){
+  handleProgress(key, progressObject){
+    let files = this.state.files,
+        file = files[key];
 
-      var file = new Cornvert(e.target.files[0].path, {format: 'mp4'});
-      // file.options = {format: 'mp4'}
-      file.oninfo = function(){
-        console.log(this.type);
-        console.log(this.resolution.join('×'));
+    file.progress = progressObject.value;
 
-      }
-      file.ondone = function(){
-        console.log('done!');
-      }
-      file.onprogress = function(progress){
-        console.log('progress: ', progress.value);
-      }
+    this.setState({
+      files
+    });
+  }
 
-      file.start();
-
-      this.setState({files: [ ...this.state.files, file]});
-    }
+  handleError(key, error){
 
   }
 
-  render() {
+  handleDone(key, doneObject){
 
+  }
+
+  handleChange(e){
+    let files = e.target.files,
+        filesLength = files.length,
+        filesArray = this.state.files;
+
+    for (let i = 0; i < filesLength; i++) {
+      let file = files[i],
+          fileObject = new Cornvert(file.path),
+          fileKey = filesArray.push(fileObject) - 1;
+
+      fileObject.key = fileKey;
+      fileObject.name = file.name;
+
+      fileObject.oninfo = this.handleInfo;
+      fileObject.onprogress = this.handleProgress.bind(this, fileKey);
+      fileObject.onerror = this.handleError.bind(this, fileKey);
+      fileObject.ondone = this.handleDone.bind(this, fileKey);
+    }
+
+    this.setState({
+      files: filesArray
+    });
+  }
+
+  render() {
     return (
       <div className={styles.container}>
         <Header />
@@ -63,7 +82,7 @@ export default class Home extends Component<Props> {
             <File name={file.name} />
           ))}
         </div>
-        <input type="file" onChange={this.handleChange.bind(this)}/>
+        <input type="file" multiple onChange={this.handleChange}/>
       </div>
     );
   }
