@@ -1,4 +1,31 @@
-body {
-  -webkit-app-region: drag;
-  margin: 0;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 13px;
+}
+
+.list {
+  flex: 1;
+  margin-top: 5px;
+  overflow-y: auto;
+}
+
+.bar {
+  display: flex;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-top: 1px solid #ddd;
+}
+
+.addFileButton {
+  margin-right: auto;
+}
+
+.format {
+  margin-right: 10px;
+}
+
+.file-drop-dragging-over-target {
+  background-size: #f0f;
 }

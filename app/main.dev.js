@@ -69,7 +69,7 @@ app.on('ready', async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 400,
+    width: 450,
     height: 300,
     resizable: false,
     titleBarStyle: 'customButtonsOnHover'

@@ -2,17 +2,17 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
+  padding: .1em .4em;
 }
 
 .icon {
-  margin-left: 0.4em;
   opacity: 0.5;
 }
 
 .data {
+  position: relative;
   display: flex;
   flex: 1;
-  // background: #f00;
 }
 
 .fileName {
@@ -20,10 +20,26 @@
   text-overflow: ellipsis;
   overflow: hidden;
   width: 100%;
+  flex: 1;
+  width: 0;
 }
 
 .info {
-  // background: #00f;
   margin-left: 1em;
-  opacity: 0.8;
+  opacity: .6;
+}
+
+.progressBar {
+  width: 100%;
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  background: #eee;
+  border-radius: 2px;
+}
+
+.progress {
+  background: #3F8BFC;
+  height: 100%;
+  transition: width.1s ease;
 }

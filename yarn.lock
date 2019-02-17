@@ -3278,6 +3278,11 @@ bytes@3.0.0:
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
   integrity sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg=
 
+bytes@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
+  integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
+
 cacache@^11.0.2:
   version "11.2.0"
   resolved "https://registry.npmjs.org/cacache/-/cacache-11.2.0.tgz#617bdc0b02844af56310e411c0878941d5739965"
@@ -10964,6 +10969,13 @@ react-dom@^16.7.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.12.0"
+
+react-file-drop@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/react-file-drop/-/react-file-drop-0.2.7.tgz#9bdfab8aa1bf75990655d953d93c22b5e48a32dd"
+  integrity sha512-o4iH/4OQvvrSHDf6Tas0pTjIwOp0bAX2dlITRuS9ULpFXHVKOCasOyUamMjutOU8RhuqkCSiTbdtILViVymiUA==
+  dependencies:
+    prop-types "^15.6.1"
 
 react-hot-loader@^4.6.3:
   version "4.6.3"

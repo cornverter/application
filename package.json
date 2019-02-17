@@ -250,6 +250,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
+    "bytes": "^3.1.0",
     "connected-react-router": "^5.0.1",
     "devtron": "^1.4.0",
     "electron-debug": "^2.0.0",
@@ -261,6 +262,7 @@
     "history": "^4.7.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-file-drop": "^0.2.7",
     "react-hot-loader": "^4.6.3",
     "react-redux": "^5.1.1",
     "react-router": "^4.3.1",
