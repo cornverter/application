@@ -1,0 +1,29 @@
+.file {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.icon {
+  margin-left: 0.4em;
+  opacity: 0.5;
+}
+
+.data {
+  display: flex;
+  flex: 1;
+  // background: #f00;
+}
+
+.fileName {
+  margin-left: 0.5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.info {
+  // background: #00f;
+  margin-left: 1em;
+  opacity: 0.8;
+}
