@@ -69,8 +69,10 @@ app.on('ready', async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
-    height: 728
+    width: 400,
+    height: 300,
+    resizable: false,
+    titleBarStyle: 'customButtonsOnHover'
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
