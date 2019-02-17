@@ -1,0 +1,30 @@
+.fileDrop {
+  position: relative;
+  display: block;
+}
+
+
+.dragText {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: fit-content;
+  height: fit-content;
+  background: rgba(0,0,0,.05);
+  padding: 1em 2em;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.draggingOverFrame {
+  .content {
+    opacity: .5;
+  }
+  .dragText {
+    display: block;
+  }
+}

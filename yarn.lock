@@ -3278,6 +3278,11 @@ bytes@3.0.0:
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
   integrity sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg=
 
+bytes@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
+  integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
+
 cacache@^11.0.2:
   version "11.2.0"
   resolved "https://registry.npmjs.org/cacache/-/cacache-11.2.0.tgz#617bdc0b02844af56310e411c0878941d5739965"
@@ -5899,12 +5904,6 @@ ffmpeg-static@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/ffmpeg-static/-/ffmpeg-static-2.4.0.tgz#eb3a248849943d493c2a311c0e5e45a06259103a"
   integrity sha512-OcYTewd3we/Zi4W+VJtEqrfDzRSMwLs0NyAa61qw/FqtbttidGrm+BFsq44prtT3s6/LV6+aoXNpyNBOshXBuA==
-
-"ffmpeg@github:damianociarla/node-ffmpeg":
-  version "0.0.4"
-  resolved "https://codeload.github.com/damianociarla/node-ffmpeg/tar.gz/f36febdb96bab8c4573ee1af4e617b284fac25cb"
-  dependencies:
-    when ">= 0.0.1"
 
 figgy-pudding@^3.1.0, figgy-pudding@^3.5.1:
   version "3.5.1"
@@ -10966,6 +10965,13 @@ react-dom@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
+react-file-drop@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/react-file-drop/-/react-file-drop-0.2.7.tgz#9bdfab8aa1bf75990655d953d93c22b5e48a32dd"
+  integrity sha512-o4iH/4OQvvrSHDf6Tas0pTjIwOp0bAX2dlITRuS9ULpFXHVKOCasOyUamMjutOU8RhuqkCSiTbdtILViVymiUA==
+  dependencies:
+    prop-types "^15.6.1"
+
 react-hot-loader@^4.6.3:
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.6.3.tgz#d9c8923c45b35fd51538ba4297081a00be6bccb1"
@@ -13963,11 +13969,6 @@ whatwg-url@^7.0.0:
     lodash.sortby "^4.7.0"
     tr46 "^1.0.1"
     webidl-conversions "^4.0.2"
-
-"when@>= 0.0.1":
-  version "3.7.8"
-  resolved "https://registry.yarnpkg.com/when/-/when-3.7.8.tgz#c7130b6a7ea04693e842cdc9e7a1f2aa39a39f82"
-  integrity sha1-xxMLan6gRpPoQs3J56Hyqjmjn4I=
 
 which-module@^1.0.0:
   version "1.0.0"
