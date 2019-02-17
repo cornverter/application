@@ -4,8 +4,14 @@ import { Link } from 'react-router-dom';
 import styles from './Main.scss';
 import File from './UI/File';
 import Header from './UI/Header';
+import Cornvert from './../libs/ffmpeg'
 // const fixPath = require('fix-path');
 // fixPath();
+
+
+
+
+//=========
 
 
 export default class Home extends Component<Props> {
@@ -15,14 +21,34 @@ export default class Home extends Component<Props> {
     files: []
   }
 
+  // var files = [];
+
   handleChange(e){
     console.log(e.target.files);
     this.setState({files: [{ name: e.target.files[0].name }]});
-   // this.setState({
-   //    files: e.target.files.map(f => {
-   //      name = f.name;
-   //    })
-   //  });
+
+    
+    for(var i=0; i<e.target.files.length; i++){
+
+      var file = new Cornvert(e.target.files[0].path, {format: 'mp4'});
+      // file.options = {format: 'mp4'}
+      file.oninfo = function(){
+        console.log(this.type);
+        console.log(this.resolution.join('×'));
+
+      }
+      file.ondone = function(){
+        console.log('done!');
+      }
+      file.onprogress = function(progress){
+        console.log('progress: ', progress.value);
+      }
+
+      file.start();
+
+      this.setState({files: [ ...this.state.files, file]});
+    }
+
   }
 
   render() {
